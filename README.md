@@ -12,8 +12,10 @@
 - Eventer  
 近期迷上紙片人（VTuber），常常追 live，看線上直播與線下活動。
 
-### 鏈接
+### 聯繫方式
 - GitHub：<https://github.com/dtlnor>
+- Discord: dtlnor
+- QQ: 2360374105
 
 ---
 
@@ -32,4 +34,3 @@ Recently into VTubers; often chasing lives—following online streams and offlin
 ### Contact
 - GitHub: <https://github.com/dtlnor>
 - Discord: dtlnor
-- QQ: 2360374105
