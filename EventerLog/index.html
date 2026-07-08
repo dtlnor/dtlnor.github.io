@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventer Log</title>
+    <style>
+        :root {
+            --bg-color: #f5f5f7;
+            --ticket-bg: #ffffff;
+            --text-main: #1d1d1f;
+            --text-sub: #666666;
+            --border-dash: #cccccc;
+            --app-gap: 14px;
+            --single-column-max-width: 420px;
+            --column-min-width: 340px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 16px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .app-container {
+            width: 100%;
+            max-width: var(--single-column-max-width);
+            display: flex;
+            flex-direction: column;
+            gap: var(--app-gap);
+        }
+
+        .app-container.multi-column {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(var(--column-min-width), 1fr));
+            align-items: start;
+        }
+
+        .group-divider {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-sub);
+            font-size: 12px;
+            grid-column: 1 / -1;
+        }
+
+        .group-divider::before,
+        .group-divider::after {
+            content: '';
+            flex: 1;
+            border-top: 1px solid var(--border-dash);
+        }
+
+        .group-divider-label {
+            white-space: nowrap;
+            font-weight: 600;
+        }
+
+        /* 【修改】移除 height: 140px，改用 min-height，讓卡片可以被長標題動態撐高 */
+        .ticket-card {
+            display: flex;
+            background-color: var(--ticket-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            position: relative;
+            min-height: 140px; 
+        }
+
+        /* 【修改】海報不再寫死 100% 高度，改用 align-self 縱向拉伸，避免卡片變高時圖片拉伸變形 */
+        .ticket-poster-container {
+            width: 110px;
+            align-self: stretch;
+            flex-shrink: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+            background-color: var(--ticket-bg);
+        }
+
+        .ticket-poster {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .ticket-divider {
+            width: 1px;
+            position: relative;
+            border-left: 1.5px dashed var(--border-dash);
+            margin: 0 4px;
+        }
+        .ticket-divider::before,
+        .ticket-divider::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background-color: var(--bg-color);
+            border-radius: 50%;
+            left: -9px;
+        }
+        .ticket-divider::before { top: -8px; }
+        .ticket-divider::after { bottom: -8px; }
+
+        .ticket-info {
+            flex: 1;
+            padding: 12px 14px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+
+        /* 【修改】移除固定高度和不換行，允許長標題自動折行 */
+        .ticket-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #444444;
+            color: #ffffff;
+            margin: -12px -14px 8px -14px;
+            padding: 8px 14px;
+            font-size: 13px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        /* 【修改】取消強制單行不換行，允許中英文自動換行 */
+        .ticket-title {
+            white-space: normal; 
+            word-break: keep-all; 
+            flex: 1;
+            line-height: 1.4;
+        }
+
+        .info-body {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            font-size: 12px;
+            color: var(--text-sub);
+            margin-top: 4px; /* 增加間距避免和換行標題太擠 */
+        }
+
+        .info-time {
+            color: var(--text-main);
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        .info-artist {
+            color: var(--text-main);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app-container" id="ticket-list"></div>
+
+    <script>
+        const APP_OPTIONS = {
+            layout: {
+                enableMultiColumn: true,
+                maxColumns: 3,
+                minColumnWidth: 340
+            },
+            grouping: {
+                enabled: true,
+                mode: 'year-month' // 'year' | 'month' | 'year-month'
+            }
+        };
+
+        function parseTicketDate(dateStr) {
+            return new Date(dateStr.replace(/-/g, "/"));
+        }
+
+        function formatTicketDate(dateStr) {
+            const d = parseTicketDate(dateStr);
+            const weeks = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+            const month = String(d.getMonth() + 1).padStart(2, '0');
+            const day = String(d.getDate()).padStart(2, '0');
+            const year = d.getFullYear();
+            const weekStr = weeks[d.getDay()];
+            let hours = d.getHours();
+            const minutes = String(d.getMinutes()).padStart(2, '0');
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12;
+            hours = hours ? hours : 12;
+            return `${month}/${day}/${year} (${weekStr}) ${String(hours).padStart(2, '0')}:${minutes} ${ampm}`;
+        }
+
+        function getPosterMainColor(posterSrc, callback) {
+            if (!posterSrc) {
+                callback('#444444', [68, 68, 68]);
+                return;
+            }
+
+            const imgElement = new Image();
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            if (/^https?:\/\//i.test(posterSrc)) {
+                imgElement.crossOrigin = "anonymous";
+            }
+
+            const extractColor = () => {
+                try {
+                    const sampleSize = 30;
+                    canvas.width = sampleSize;
+                    canvas.height = sampleSize;
+                    ctx.drawImage(imgElement, 0, 0, sampleSize, sampleSize);
+                    const imgData = ctx.getImageData(0, 0, sampleSize, sampleSize).data;
+                    const bins = new Uint32Array(512);
+                    let maxCount = 0; let maxBinKey = 0;
+                    for (let i = 0; i < imgData.length; i += 4) {
+                        if (imgData[i + 3] < 128) continue;
+                        const rBin = imgData[i] >> 5; const gBin = imgData[i + 1] >> 5; const bBin = imgData[i + 2] >> 5;
+                        const binKey = (rBin << 6) | (gBin << 3) | bBin;
+                        bins[binKey]++;
+                        if (bins[binKey] > maxCount) { maxCount = bins[binKey]; maxBinKey = binKey; }
+                    }
+                    const r = ((maxBinKey >> 6) & 7) * 32 + 16; const g = ((maxBinKey >> 3) & 7) * 32 + 16; const b = (maxBinKey & 7) * 32 + 16;
+                    callback(`rgb(${r}, ${g}, ${b})`, [r, g, b]);
+                } catch (e) {
+                    callback('#444444', [68, 68, 68]);
+                }
+            };
+
+            imgElement.addEventListener('load', extractColor);
+            imgElement.addEventListener('error', function () {
+                callback('#444444', [68, 68, 68]);
+            });
+            imgElement.src = posterSrc;
+        }
+
+        function toCssLength(value, fallback = '') {
+            if (value === null || value === undefined || value === '') return fallback;
+            if (typeof value === 'number' && Number.isFinite(value)) return `${value}px`;
+            if (typeof value === 'string') {
+                const trimmed = value.trim();
+                if (!trimmed) return fallback;
+                return /^-?\d+(\.\d+)?$/.test(trimmed) ? `${trimmed}px` : trimmed;
+            }
+            return fallback;
+        }
+
+        function applyLayoutOptions(container) {
+            const { enableMultiColumn, maxColumns, minColumnWidth } = APP_OPTIONS.layout;
+            if (!enableMultiColumn) {
+                container.classList.remove('multi-column');
+                container.style.maxWidth = 'var(--single-column-max-width)';
+                return;
+            }
+
+            const safeMaxColumns = Math.max(1, Number(maxColumns) || 1);
+            const minWidth = toCssLength(minColumnWidth, '340px');
+
+            container.classList.add('multi-column');
+            container.style.setProperty('--column-min-width', minWidth);
+            container.style.maxWidth = `calc(${safeMaxColumns} * var(--column-min-width) + ${(safeMaxColumns - 1)} * var(--app-gap))`;
+        }
+
+        function getGroupKey(dateObj) {
+            const year = dateObj.getFullYear();
+            const month = String(dateObj.getMonth() + 1).padStart(2, '0');
+            const mode = APP_OPTIONS.grouping.mode;
+            if (mode === 'year') return String(year);
+            if (mode === 'month') return month;
+            return `${year}-${month}`;
+        }
+
+        function getGroupLabel(dateObj) {
+            const year = dateObj.getFullYear();
+            const month = String(dateObj.getMonth() + 1).padStart(2, '0');
+            const mode = APP_OPTIONS.grouping.mode;
+            if (mode === 'year') return String(year);
+            if (mode === 'month') return month;
+            return `${year}-${month}`;
+        }
+
+        function appendGroupDivider(container, label) {
+            const divider = document.createElement('div');
+            divider.className = 'group-divider';
+            const text = document.createElement('span');
+            text.className = 'group-divider-label';
+            text.textContent = label;
+            divider.appendChild(text);
+            container.appendChild(divider);
+        }
+
+        function getPosterContainerStyle(ticket) {
+            const paddingValue = toCssLength(ticket.posterPadding);
+            return paddingValue ? `padding:${paddingValue};` : '';
+        }
+
+        function toPercentValue(value, fallback) {
+            if (value === null || value === undefined || value === '') return fallback;
+            if (typeof value === 'number' && Number.isFinite(value)) return `${value}%`;
+            if (typeof value === 'string') {
+                const trimmed = value.trim();
+                if (!trimmed) return fallback;
+                return /^-?\d+(\.\d+)?$/.test(trimmed) ? `${trimmed}%` : trimmed;
+            }
+            return fallback;
+        }
+
+        function getPosterPosition(ticket) {
+            if (ticket.posterPosition) return ticket.posterPosition;
+            const x = toPercentValue(ticket.posterPositionX, '50%');
+            const y = toPercentValue(ticket.posterPositionY, '50%');
+            return `${x} ${y}`;
+        }
+
+        function getPosterImageStyle(ticket) {
+            const styles = [];
+            styles.push(`object-position:${getPosterPosition(ticket)};`);
+            styles.push(`object-fit:${ticket.posterFit || 'cover'};`);
+            return styles.join('');
+        }
+
+        const listContainer = document.getElementById('ticket-list');
+        applyLayoutOptions(listContainer);
+
+        fetch('events.json')
+            .then(response => response.json())
+            .then(ticketData => {
+                ticketData.sort((a, b) => parseTicketDate(b.date) - parseTicketDate(a.date));
+                let lastGroupKey = null;
+
+                ticketData.forEach((ticket, index) => {
+                    const ticketDate = parseTicketDate(ticket.date);
+                    if (APP_OPTIONS.grouping.enabled) {
+                        const currentGroupKey = getGroupKey(ticketDate);
+                        if (currentGroupKey !== lastGroupKey) {
+                            appendGroupDivider(listContainer, getGroupLabel(ticketDate));
+                            lastGroupKey = currentGroupKey;
+                        }
+                    }
+
+                    const card = document.createElement('div');
+                    card.className = 'ticket-card';
+                    const dynamicDisplayDate = formatTicketDate(ticket.date);
+                    const posterContainerStyle = getPosterContainerStyle(ticket);
+                    const posterImageStyle = getPosterImageStyle(ticket);
+
+                    card.innerHTML = `
+                        <div class="ticket-poster-container" style="${posterContainerStyle}">
+                            <img class="ticket-poster" style="${posterImageStyle}" alt="Poster" id="img-${index}">
+                        </div>
+                        <div class="ticket-divider"></div>
+                        <div class="ticket-info">
+                            <div class="ticket-header" id="header-${index}">
+                                <span class="ticket-title">${ticket.title}</span>
+                            </div>
+                            <div class="info-body">
+                                <div class="info-time">${dynamicDisplayDate}</div>
+                                <div class="info-artist">${ticket.artist.replace(/\n/g, '<br>')}</div>
+                                <div>${ticket.venue}</div>
+                                <div>${ticket.seat || '&nbsp;'}</div>
+                            </div>
+                        </div>
+                    `;
+                    listContainer.appendChild(card);
+
+                    const imgEl = document.getElementById(`img-${index}`);
+                    const headerEl = document.getElementById(`header-${index}`);
+                    const posterSrc = ticket.poster || '';
+
+                    imgEl.addEventListener('error', function () {
+                        imgEl.src = "";
+                    });
+
+                    imgEl.src = posterSrc;
+
+                    getPosterMainColor(posterSrc, function (extractedColor, rgbArray) {
+                        headerEl.style.backgroundColor = extractedColor;
+                        const brightness = (rgbArray[0] * 299 + rgbArray[1] * 587 + rgbArray[2] * 114) / 1000;
+                        headerEl.style.color = brightness > 185 ? '#1d1d1f' : '#ffffff';
+                    });
+                });
+            })
+            .catch(error => { listContainer.innerHTML = `<p style="color:red; text-align:center;">數據加載失敗: ${error}</p>`; });
+    </script>
+</body>
+</html>

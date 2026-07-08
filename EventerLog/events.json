@@ -1,0 +1,696 @@
+[
+  {
+    "title": "「HIMEHINA WORLD Tour 2026 Final 2Days」Day2『LIFETIME is BUBBLIN -GRAND FINALE-』",
+    "date": "2026-10-04 18:00",
+    "artist": "HIMEHINA",
+    "venue": "SGC HALL ARIAKE",
+    "seat": "",
+    "info": "https://spc.himehina.jp/world-tour26",
+    "poster": "pictures\\「HIMEHINA WORLD Tour 2026 Final 2Days」Day2『LIFETIME is BUBBLIN -GRAND FINALE-』.png"
+  },
+  {
+    "title": "「HIMEHINA WORLD Tour 2026 Final 2Days」Day1『ヒメヒナウタミタ祭 ～負けないでもう少し最後まで走り抜けて～』",
+    "date": "2026-10-03 18:00",
+    "artist": "HIMEHINA",
+    "venue": "SGC HALL ARIAKE",
+    "seat": "",
+    "info": "https://spc.himehina.jp/world-tour26",
+    "poster": "pictures/「HIMEHINA WORLD Tour 2026 Final 2Days」Day1『ヒメヒナウタミタ祭 ～負けないでもう少し最後まで走り抜けて～』.webp"
+  },
+  {
+    "title": "TOGENASHI TOGEARI 香港演唱會 2026",
+    "date": "2026-10-02 00:00",
+    "artist": "TOGENASHI TOGEARI",
+    "venue": "",
+    "seat": "",
+    "info": "",
+    "poster": "pictures/TOGENASHI TOGEARI 香港演唱會 2026.png"
+  },
+  {
+    "title": "HIMEHINA WORLD Tour 2026『LIFETIME is BUBBLIN』in Tokyo",
+    "date": "2026-08-11 17:30",
+    "artist": "HIMEHINA",
+    "venue": "Zepp DiverCity Tokyo",
+    "seat": "",
+    "info": "",
+    "poster": "pictures\\「HIMEHINA WORLD Tour 2026 Final 2Days」Day2『LIFETIME is BUBBLIN -GRAND FINALE-』.png"
+  },
+  {
+    "title": "Reol Oneman Live 2026 美辭學 in TAIPEI",
+    "date": "2026-07-26 18:00",
+    "artist": "Reol",
+    "venue": "Zepp New Taipei",
+    "seat": "",
+    "info": "pictures\\Reol Oneman Live 2026 美辞学 at 桜坂セントラル.jpeg",
+    "poster": "pictures/Reol Oneman Live 2026 美辭學 in TAIPEI.jpg"
+  },
+  {
+    "title": "LiSA - LiVE is Smile Always～15～ in Hong Kong",
+    "date": "2026-07-18 20:00",
+    "artist": "LiSA",
+    "venue": "AsiaWorld-Arena (Hall 1)",
+    "seat": "",
+    "info": "",
+    "poster": "pictures/LiSA - LiVE is Smile Always～15～ in Hong Kong.jpg"
+  },
+  {
+    "title": "Re:AcT SUMMER FES 2026 昼公演 8th Anniversary Live 『CURRENT』",
+    "date": "2026-07-12 15:30",
+    "artist": "獅子神レオナ、夢川かなう、水瓶ミア、丸餅つきみ、月紫アリア、猫乃ユキノ、皇ロゼ、稀羽すう、魔光リサ、彩雲のの、音伽ねむ、白音ゆき、杏夜くもり、レイラ・サマ、鈴花いのり、音羽奏來、神凪アンナ、不知名イヲ、燈明寺かぐら、kototo!",
+    "venue": "SUPERNOVA KAWASAKI",
+    "seat": "",
+    "info": "",
+    "poster": "pictures/Re_AcT SUMMER FES 2026 昼公演 8th Anniversary Live 『CURRENT』.jpg"
+  },
+  {
+    "title": "Re:AcT SUMMER FES 2026 夜公演 Re:AcT SUMMER FES『HEAT UP NIGHT』",
+    "date": "2026-07-12 19:00",
+    "artist": "獅子神レオナ、夢川かなう、水瓶ミア、丸餅つきみ、月紫アリア、猫乃ユキノ、皇ロゼ、稀羽すう、魔光リサ、彩雲のの、音伽ねむ、白音ゆき、杏夜くもり、レイラ・サマ、鈴花いのり、音羽奏來、神凪アンナ、不知名イヲ、燈明寺かぐら、kototo!",
+    "venue": "SUPERNOVA KAWASAKI",
+    "seat": "",
+    "info": "",
+    "poster": "pictures/Re_AcT SUMMER FES 2026 夜公演 Re_AcT SUMMER FES『HEAT UP NIGHT』.jpg"
+  },
+  {
+    "title": "Reol Oneman Live 2026  美辞学  at LINE CUBE SHIBUYA",
+    "date": "2026-07-10 18:30",
+    "artist": "Reol",
+    "venue": "LINE CUBE SHIBUYA",
+    "seat": "3階 4列 41番",
+    "info": "",
+    "poster": "pictures/Reol Oneman Live 2026 美辞学 at LINE CUBE SHIBUYA.webp"
+  },
+  {
+    "title": "HIMEHINA WORLD Tour 2026『LIFETIME is BUBBLIN』 in SEOUL",
+    "date": "2026-06-28 17:00",
+    "artist": "HIMEHINA",
+    "venue": "YES24 LIVE HALL",
+    "seat": "1F Standing",
+    "info": "",
+    "poster": "pictures/HIMEHINA WORLD Tour 2026『LIFETIME is BUBBLIN』 in SEOUL.jpg",
+    "poster2": "pictures/HIMEHINA WORLD Tour 2026『LIFETIME is BUBBLIN』 in SEOUL_poster2.png"
+  },
+  {
+    "title": "HIMEHINA ASIA Tour 2026『LIFETIME is BUBBLIN』in TAIPEI",
+    "date": "2026-06-06 19:00",
+    "artist": "HIMEHINA",
+    "venue": "Zepp New Taipei",
+    "seat": "1F Standing",
+    "info": "",
+    "poster": "pictures/HIMEHINA ASIA Tour 2026『LIFETIME is BUBBLIN』in TAIPEI.jpg"
+  },
+  {
+    "title": "花譜| 宿聲in Hong Kong",
+    "date": "2026-05-30 00:00",
+    "artist": "花譜、理芽、ヰ世界情緒",
+    "venue": "AsiaWorld-Expo, Hall 10",
+    "seat": "SVIP",
+    "info": "",
+    "poster": "pictures/花譜_ 宿聲in Hong Kong.jpg"
+  },
+  {
+    "title": "ヰ世界情緒 2DAYS LIVE DAY-1「Flower Closet」DAY-2「Anima Re:birth」",
+    "date": "2026-05-02 18:00",
+    "artist": "ヰ世界情緒",
+    "venue": "Zepp Haneda",
+    "seat": "スタンディング（特典グッズ付き）",
+    "info": "",
+    "poster": "pictures/ヰ世界情緒 2DAYS LIVE DAY-1「Flower Closet」DAY-2「Anima Re_birth」.jpg",
+    "posterPositionX": "right"
+  },
+  {
+    "title": "ヰ世界情緒 2DAYS LIVE DAY-1「Flower Closet」DAY-2「Anima Re:birth」",
+    "date": "2026-05-01 18:30",
+    "artist": "ヰ世界情緒",
+    "venue": "Zepp Haneda",
+    "seat": "スタンディング（特典グッズ付き）",
+    "info": "",
+    "poster": "pictures/ヰ世界情緒 2DAYS LIVE DAY-1「Flower Closet」DAY-2「Anima Re_birth」_2.jpg",
+    "posterPositionX": 5
+  },
+  {
+    "title": "Reol Oneman Live 2026  美辞学  at 桜坂セントラル",
+    "date": "2026-04-29 17:00",
+    "artist": "Reol",
+    "venue": "桜坂セントラル",
+    "seat": "Standing",
+    "info": "",
+    "poster": "pictures\\Reol Oneman Live 2026 美辞学 at 桜坂セントラル.jpeg"
+  },
+  {
+    "title": "HIMEHINA ASIA Tour 2026『LIFETIME is BUBBLIN』 名古屋",
+    "date": "2026-04-11 17:30",
+    "artist": "HIMEHINA",
+    "venue": "Zepp Nagoya",
+    "seat": "Sエリア スタンディング",
+    "info": "",
+    "poster": "pictures/HIMEHINA ASIA Tour 2026『LIFETIME is BUBBLIN』 名古屋.jpg"
+  },
+  {
+    "title": "Vocaloid Essentials on Stage III V家鑄台絕唱III",
+    "date": "2026-03-19 20:00",
+    "artist": "Kizuna AI、花たん、Pokota、杏仁咪嚕、SERRA、Akie秋絵",
+    "venue": "伊利沙伯體育館表演場",
+    "seat": "B區",
+    "info": "",
+    "poster": "pictures/Vocaloid Essentials on Stage III V家鑄台絕唱III.jpg"
+  },
+  {
+    "title": "Vocaloid Essentials on Stage III V家鑄台絕唱III",
+    "date": "2026-03-18 20:00",
+    "artist": "Kizuna AI、花たん、Pokota、杏仁咪嚕、SERRA、Akie秋絵",
+    "venue": "伊利沙伯體育館表演場",
+    "seat": "E區",
+    "info": "",
+    "poster": "pictures/Vocaloid Essentials on Stage III V家鑄台絕唱III_2.jpg"
+  },
+  {
+    "title": "HIMEHINA ASIA Tour 2026『LIFETIME is BUBBLIN』 仙台",
+    "date": "2026-03-14 17:30",
+    "artist": "HIMEHINA",
+    "venue": "SENDAI GIGS",
+    "seat": "Sエリア スタンディング",
+    "info": "",
+    "poster": "pictures/HIMEHINA ASIA Tour 2026『LIFETIME is BUBBLIN』 仙台.jpg"
+  },
+  {
+    "title": "MyGO!!!!!×Ave Mujica ツーマンライブ「“moment / memory”」",
+    "date": "2026-03-01 17:00",
+    "artist": "MyGO!!!!!×Ave Mujica",
+    "venue": "Kアリーナ横浜",
+    "seat": "1階",
+    "info": "",
+    "poster": "pictures/MyGO!!!!!×Ave Mujica ツーマンライブ「“moment _ memory”」.jpg"
+  },
+  {
+    "title": "KAMITSUBAKI WARS 2026 神椿横浜決戦 IN ぴあアリーナMM DAY-1\nV.W.P 4th ONE-MAN LIVE 「現象IV-反転運命-」",
+    "date": "2026-02-28 18:00",
+    "artist": "V.W.P",
+    "venue": "ぴあアリーナMM",
+    "seat": "ｱﾘｰﾅ席(特典ｸﾞｯｽﾞ付き)",
+    "info": "https://yokohamawars2026.kamitsubaki.jp/vwp",
+    "poster": "pictures/KAMITSUBAKI WARS 2026 神椿横浜決戦 IN ぴあアリーナMM DAY-1_V.W.P 4th ONE-MAN LIVE 「現象IV-反転運命-」.jpg",
+    "posterPositionX": 25
+  },
+  {
+    "title": "HIMEHINA ASIA Tour 2026『LIFETIME is BUBBLIN』 大阪",
+    "date": "2026-02-11 17:30",
+    "artist": "HIMEHINA",
+    "venue": "Zepp Osaka Bayside",
+    "seat": "Sエリア スタンディング",
+    "info": "",
+    "poster": "pictures/HIMEHINA ASIA Tour 2026『LIFETIME is BUBBLIN』 大阪.jpg"
+  },
+  {
+    "title": "HIMEHINA ASIA Tour 2026『LIFETIME is BUBBLIN』 福岡",
+    "date": "2026-01-17 17:30",
+    "artist": "HIMEHINA",
+    "venue": "Zepp Fukuoka",
+    "seat": "Sエリア スタンディング",
+    "info": "",
+    "poster": "pictures/HIMEHINA ASIA Tour 2026『LIFETIME is BUBBLIN』 福岡.jpg"
+  },
+  {
+    "title": "HIMEHINA LIVE 2025『LIFETIME is BUBBLIN』Day2",
+    "date": "2025-11-23 19:00",
+    "artist": "HIMEHINA",
+    "venue": "パシフィコ横浜 国立大ホール",
+    "seat": "Sエリア《通し特典付き》",
+    "info": "",
+    "poster": "pictures/HIMEHINA LIVE 2025『LIFETIME is BUBBLIN』Day2.png",
+    "posterPositionX": 70
+  },
+  {
+    "title": "HIMEHINA LIVE 2025『LIFETIME is BUBBLIN』Day1",
+    "date": "2025-11-22 19:00",
+    "artist": "HIMEHINA",
+    "venue": "パシフィコ横浜 国立大ホール",
+    "seat": "Sエリア《通し特典付き》",
+    "info": "",
+    "poster": "pictures/HIMEHINA LIVE 2025『LIFETIME is BUBBLIN』Day1.png",
+    "posterPositionX": 70
+  },
+  {
+    "title": "Reol Oneman Live「無題」in YOKOHAMA ARENA",
+    "date": "2025-11-09 18:00",
+    "artist": "Reol",
+    "venue": "横浜アリーナ",
+    "seat": "",
+    "info": "https://reol.jp/feature/Arena_Yokohama",
+    "poster": "pictures/Reol Oneman Live「無題」in YOKOHAMA ARENA.jpg"
+  },
+  {
+    "title": "《進擊的巨人》— 牆外之境世界巡迴— 官方音樂會",
+    "date": "2025-11-04 20:00",
+    "artist": "Wild Faery",
+    "venue": "AsiaWorld-Arena (Hall 1)",
+    "seat": "Seat",
+    "info": "https://www.asiaworld-expo.com/zh-tc/whats-on/upcoming-events/events/attack-on-titan-beyond-the-walls-world-tour-in-hon/",
+    "poster": "pictures/《進擊的巨人》— 牆外之境世界巡迴— 官方音樂會.jpg",
+    "posterPositionX": 5
+  },
+  {
+    "title": "异世界情绪展-上海特展「Anima」放映会",
+    "date": "2025-10-12 17:00",
+    "artist": "ヰ世界情緒",
+    "venue": "上海插画艺术中心福州路465号上海书城7楼",
+    "seat": "Seat",
+    "info": "",
+    "poster": "pictures/异世界情绪展-上海特展「Anima」放映会.png"
+  },
+  {
+    "title": "BABYMETAL WORLD TOUR 2025 IN ASIA Live in Hong Kong",
+    "date": "2025-09-30 19:00",
+    "artist": "BABYMETAL",
+    "venue": "亞洲國際博覽館 Arena(Hall 1)",
+    "seat": "VIP A Standing",
+    "info": "",
+    "poster": "pictures/BABYMETAL WORLD TOUR 2025 IN ASIA Live in Hong Kong.jpg"
+  },
+  {
+    "title": "トゲナシトゲアリ LIVE in 日本武道館 “奏檄の叫”",
+    "date": "2025-09-23 18:00",
+    "artist": "トゲナシトゲアリ",
+    "venue": "武道館",
+    "seat": "Seat",
+    "info": "",
+    "poster": "pictures/トゲナシトゲアリ LIVE in 日本武道館 “奏檄の叫”.jpg"
+  },
+  {
+    "title": "QUEEN BEE Tour 2025 「AKU」 in Hong Kong",
+    "date": "2025-09-19 20:00",
+    "artist": "女王蜂",
+    "venue": "東華三院東蒲胡李名靜體育館",
+    "seat": "Standing",
+    "info": "",
+    "poster": "pictures/QUEEN BEE Tour 2025 「AKU」 in Hong Kong.jpg"
+  },
+  {
+    "title": "澳门·柿雪营地 in macau magic meeting",
+    "date": "2025-09-06 10:00",
+    "artist": "柿チョコ、松下、あやぽんず*",
+    "venue": "澳门威尼斯人金光综艺馆",
+    "seat": "",
+    "info": "",
+    "poster": "pictures/澳门·柿雪营地 in macau magic meeting.png"
+  },
+  {
+    "title": "MOGRA 16th ANNIVERSARY PARTY DAY5",
+    "date": "2025-08-31 15:00",
+    "artist": "TeddyLoid , REMO-CON , DJ WILDPARTY , AMADEUS , D-YAMA , Mura , TAKUYA the bringer , つんこ , なみぐる , Gassyoh , Marble , Syntho , VJ餃子寿司 a.k.a 禰夢嶌れいし , 業者",
+    "venue": "秋葉原MOGRA (東京都)",
+    "seat": "",
+    "info": "https://club-mogra.jp/2025/08/31/5696/",
+    "poster": "pictures/MOGRA 16th ANNIVERSARY PARTY DAY5.png"
+  },
+  {
+    "title": "初音ミク「マジカルミライ 2025」TOKYO会場",
+    "date": "2025-08-31 12:00",
+    "artist": "初音ミク",
+    "venue": "東京・幕張メッセ",
+    "seat": "全席指定",
+    "info": "https://magicalmirai.com/2025/tokyo_map.html",
+    "poster": "pictures/初音ミク「マジカルミライ 2025」TOKYO会場.jpg"
+  },
+  {
+    "title": "HIMEHINA FAN MEETING Vol.1『バブリン総会』《夜の部》",
+    "date": "2025-08-30 19:30",
+    "artist": "HIMEHINA",
+    "venue": "TFT ホール 1000",
+    "seat": "Seat",
+    "info": "https://himehina.jp/post/post-383",
+    "poster": "pictures/HIMEHINA FAN MEETING Vol.1『バブリン総会』《夜の部》.png",
+    "poster2": "pictures/HIMEHINA FAN MEETING Vol.1『バブリン総会』《夜の部》_poster2.png"
+  },
+  {
+    "title": "HIMEHINA 2on1 撮影会 ～夏の終わりの両手にヒメヒナ～ ",
+    "date": "2025-08-30 15:45",
+    "artist": "HIMEHINA",
+    "venue": "TFT ホール 1000",
+    "seat": "Seat",
+    "info": "https://himehina.jp/post/post-383",
+    "poster": "pictures/HIMEHINA 2on1 撮影会 ～夏の終わりの両手にヒメヒナ～.jpg",
+    "posterPositionX": "left"
+  },
+  {
+    "title": "HIMEHINA FAN MEETING Vol.1『バブリン総会』《昼の部》",
+    "date": "2025-08-30 13:45",
+    "artist": "HIMEHINA",
+    "venue": "TFT ホール 1000",
+    "seat": "Seat",
+    "info": "https://himehina.jp/post/post-383",
+    "poster": "pictures/HIMEHINA FAN MEETING Vol.1『バブリン総会』《昼の部》.png",
+    "poster2": "pictures/HIMEHINA FAN MEETING Vol.1『バブリン総会』《昼の部》_poster2.png"
+  },
+  {
+    "title": "Reol Oneman Live 'No title' in SHANGHAI at 静安体育中心 JING'AN SPORTS CENTER",
+    "date": "2025-08-17 19:00",
+    "artist": "Reol",
+    "venue": "上海・静安体育中心",
+    "seat": "VIP",
+    "info": "https://reol.jp/news/detail/439",
+    "poster": "pictures/Reol Oneman Live 'No title' in SHANGHAI at 静安体育中心 JING'AN SPORTS CENTER.jpg"
+  },
+  {
+    "title": "THINKR XR CLASSICS presents KAMITSUBAKI FILM CONCERT「神椿演奏会 / 想像」BY KAMITSUBAKI PHILHARMONIC ORCHESTRA",
+    "date": "2025-08-11 18:00",
+    "artist": "KAMITSUBAKI PHILHARMONIC ORCHESTRA",
+    "venue": "茨木市文化・子育て複合施設おにクル ゴウダホール",
+    "seat": "VIP",
+    "info": "https://kamitsubaki.jp/event/artist/kamitsubaki-philharmonic-orchestra/",
+    "poster": "pictures/THINKR XR CLASSICS presents KAMITSUBAKI FILM CONCERT「神椿演奏会 _ 想像」BY KAMITSUBAKI PHILHARMONIC ORCHESTRA.jpg",
+    "posterFit": "contain"
+  },
+  {
+    "title": "初音ミク「マジカルミライ 2025」OSAKA会場",
+    "date": "2025-08-11 12:00",
+    "artist": "初音ミク",
+    "venue": "インテックス大阪",
+    "seat": "全席指定",
+    "info": "https://magicalmirai.com/2025/osaka_map.html",
+    "poster": "pictures/初音ミク「マジカルミライ 2025」OSAKA会場.jpg"
+  },
+  {
+    "title": "Joy∞Stage – 次元を超える音楽祭",
+    "date": "2025-07-19 19:30",
+    "artist": "七海うらら | 焔魔るり | HACHI | 月島クロス",
+    "venue": "香港・湾仔 Hopewell Hotel 16階 Grand Ballroom",
+    "seat": "Seat",
+    "info": "https://www.instagram.com/p/DMFhdXiym8Q/?img_index=1",
+    "poster": "pictures/Joy∞Stage – 次元を超える音楽祭.jpg"
+  },
+  {
+    "title": "Reol Oneman Tour 2025 Culture Curriculum in Guangzhou",
+    "date": "2025-06-06 20:00",
+    "artist": "Reol",
+    "venue": "池沼 CHIZHAO LIVEHOUSE",
+    "seat": "Standing",
+    "info": "https://reol.jp/news/detail/431",
+    "poster": "pictures/Reol Oneman Tour 2025 Culture Curriculum in Guangzhou.webp"
+  },
+  {
+    "title": "Reol Oneman Tour 2025 Culture Curriculum in Hong Kong",
+    "date": "2025-06-03 20:00",
+    "artist": "Reol",
+    "venue": "Portal",
+    "seat": "VIP Standing",
+    "info": "https://www.art-mate.net/doc/82346?name=Reol+Oneman+Tour+2025+Culture+Curriculum+in+Hong+Kong",
+    "poster": "pictures/Reol Oneman Tour 2025 Culture Curriculum in Hong Kong.jpg"
+  },
+  {
+    "title": "HITORIE Freaky Friendship Tour 2025 -Asia Tour- 广州",
+    "date": "2025-05-24 20:00",
+    "artist": "HITORIE",
+    "venue": "MAOLivehouse广州（永庆坊店）",
+    "seat": "Standing",
+    "info": "https://www.hitorie.jp/contents/1008237",
+    "poster": "pictures/HITORIE Freaky Friendship Tour 2025 -Asia Tour- 广州.png"
+  },
+  {
+    "title": "PinocchioP ASIA TOUR \"COMET\" IN HONG KONG",
+    "date": "2025-05-20 20:00",
+    "artist": "PinocchioP",
+    "venue": "東華三院東蒲胡李名靜體育館",
+    "seat": "Standing",
+    "info": "https://www.livenation.hk/en/pinocchiop-2025-admission-notice",
+    "poster": "pictures/PinocchioP ASIA TOUR _COMET_ IN HONG KONG.jpg"
+  },
+  {
+    "title": "Ado WORLD TOUR 2025 “Hibana” Powered by Crunchyroll in Hong Kong",
+    "date": "2025-05-18 17:00",
+    "artist": "Ado",
+    "venue": "AsiaWorld-Arena (1號展館)",
+    "seat": "Block B T54",
+    "info": "https://www.asiaworld-expo.com/en-us/whats-on/upcoming-events/events/ado_hibana2025/",
+    "poster": "pictures/Ado WORLD TOUR 2025 “Hibana” Powered by Crunchyroll in Hong Kong.jpg"
+  },
+  {
+    "title": "Tatsuya Kitani Asia Tour 2025 - Hong Kong",
+    "date": "2025-05-02 20:00",
+    "artist": "キタニタツヤ",
+    "venue": "東華三院東蒲胡李名靜體育館",
+    "seat": "VIP Standing",
+    "info": "https://www.ticketflap.com/zh-hant/tatsuyakitani2025hk",
+    "poster": "pictures/Tatsuya Kitani Asia Tour 2025 - Hong Kong.png"
+  },
+  {
+    "title": "MyGO!!!!!×Ave Mujica 合同ライブ「わかれ道の、その先へ」DAY2 : Geosmin",
+    "date": "2025-04-27 16:30",
+    "artist": "MyGO!!!!!\nAve Mujica",
+    "venue": "Kアリーナ横浜",
+    "seat": "5 LEVEL 22列 51番",
+    "info": "https://bang-dream.com/events/mygo-avemujica2025/",
+    "poster": "pictures/MyGO!!!!!×Ave Mujica 合同ライブ「わかれ道の、その先へ」DAY2 _ Geosmin.jpg"
+  },
+  {
+    "title": "MyGO!!!!!×Ave Mujica 合同ライブ「わかれ道の、その先へ」DAY1 : Petrichor",
+    "date": "2025-04-26 18:00",
+    "artist": "MyGO!!!!!\nAve Mujica",
+    "venue": "Kアリーナ横浜",
+    "seat": "5 LEVEL 22列 51番",
+    "info": "https://bang-dream.com/events/mygo-avemujica2025/",
+    "poster": "pictures/MyGO!!!!!×Ave Mujica 合同ライブ「わかれ道の、その先へ」DAY1 _ Petrichor.jpg"
+  },
+  {
+    "title": "花たん China Livetour 2025 in 広州＆上海",
+    "date": "2025-03-29 14:00",
+    "artist": "花たん\nぐるたみん",
+    "venue": "久米空间Livehouse",
+    "seat": "SVIP Standing",
+    "info": "https://www.hanatan.love/posts/56365114",
+    "poster": "pictures/花たん China Livetour 2025 in 広州＆上海.jpg"
+  },
+  {
+    "title": "fhána SPECIAL HONG KONG LIVE 2025",
+    "date": "2025-03-08 18:30",
+    "artist": "fhána",
+    "venue": "PORTAL",
+    "seat": "VIP Standing",
+    "info": "https://www.ed-production.com.hk/fhana-special-hong-kong-live-2025",
+    "poster": "pictures/fhána SPECIAL HONG KONG LIVE 2025.jpg"
+  },
+  {
+    "title": "HIMEHINA 7周年LIVE Day2『ザ・ベストニジュー』Sponsored by LIVE DAM AiR",
+    "date": "2025-03-02 19:00",
+    "artist": "HIMEHINA",
+    "venue": "TOKYO DOME CITY HALL",
+    "seat": "874",
+    "info": "https://himehina.jp/pages/live2025_7th_anniversary_live",
+    "poster": "pictures\\特典デジタルウォールペーパー_Mobile.png",
+    "poster2": "pictures/HIMEHINA 7周年LIVE Day2『ザ・ベストニジュー』Sponsored by LIVE DAM AiR_poster2.jpg"
+  },
+  {
+    "title": "HIMEHINA 7周年LIVE Day1『田中音楽堂 RealLive 〜姫雛合唱宴〜』Sponsored by LIVE DAM AiR",
+    "date": "2025-03-01 19:00",
+    "artist": "HIMEHINA",
+    "venue": "TOKYO DOME CITY HALL",
+    "seat": "318",
+    "info": "https://himehina.jp/pages/live2025_7th_anniversary_live",
+    "poster": "pictures\\特典デジタルウォールペーパー_Mobile.png",
+    "poster2": "pictures/HIMEHINA 7周年LIVE Day1『田中音楽堂 RealLive 〜姫雛合唱宴〜』Sponsored by LIVE DAM AiR_poster2.jpg"
+  },
+  {
+    "title": "Vocaloid Essentials on Stage II | V 家鑄台絕唱 II",
+    "date": "2025-02-23 20:00",
+    "artist": "花たん、SERRA、Cha'R、NKK",
+    "venue": "荃灣大會堂演奏廳",
+    "seat": "VIP",
+    "info": "https://www.art-mate.net/doc/81476?name=V%E5%AE%B6%E9%91%84%E5%8F%B0%E7%B5%95%E5%94%B1+II",
+    "poster": "pictures/Vocaloid Essentials on Stage II _ V 家鑄台絕唱 II.jpg"
+  },
+  {
+    "title": "HIMEHINA全国ツアー(西) 『涙の薫りがする』名古屋公演",
+    "date": "2025-02-15 18:00",
+    "artist": "HIMEHINA",
+    "venue": "名古屋ダイアモンドホール",
+    "seat": "",
+    "info": "https://himehina.jp/pages/live2024_namidanokaori_tour",
+    "poster": "pictures/HIMEHINA全国ツアー(西) 『涙の薫りがする』名古屋公演.png",
+    "posterPositionX": 20
+  },
+  {
+    "title": "Reol Oneman Live 2025 カルチュア・カリキュラム at.ZEPP OSAKA BAYSIDE",
+    "date": "2025-01-19 18:00",
+    "artist": "Reol",
+    "venue": "ZEPP OSAKA BAYSIDE",
+    "seat": "VIP Standing",
+    "info": "https://reol.jp/news/detail/382",
+    "poster": "pictures/Reol Oneman Live 2025 カルチュア・カリキュラム at.ZEPP OSAKA BAYSIDE.jpg"
+  },
+  {
+    "title": "HIMEHINA全国ツアー(西) 『涙の薫りがする』大阪公演",
+    "date": "2025-01-13 18:00",
+    "artist": "HIMEHINA",
+    "venue": "大阪なんばHatch",
+    "seat": "",
+    "info": "https://himehina.jp/pages/live2024_namidanokaori_tour",
+    "poster": "pictures/HIMEHINA全国ツアー(西) 『涙の薫りがする』大阪公演.png",
+    "posterPositionX": 20
+  },
+  {
+    "title": "HIMEHINA全国ツアー(西) 『涙の薫りがする』福岡公演",
+    "date": "2024-12-14 18:00",
+    "artist": "HIMEHINA",
+    "venue": "福岡DRUM LOGOS",
+    "seat": "",
+    "info": "https://himehina.jp/pages/live2024_namidanokaori_tour",
+    "poster": "pictures/HIMEHINA全国ツアー(西) 『涙の薫りがする』福岡公演.png",
+    "posterPositionX": 20
+  },
+  {
+    "title": "「Aimer Hall Tour 2024-25 “lune blanche”」仙台公演",
+    "date": "2024-12-01 16:00",
+    "artist": "Aimer",
+    "venue": "仙台サンプラザホール",
+    "seat": "",
+    "info": "https://www.aimer-web.jp/live/archive/?52129",
+    "poster": "pictures/「Aimer Hall Tour 2024-25 “lune blanche”」仙台公演.webp"
+  },
+  {
+    "title": "HITORI-ESCAPE “ASIA” TOUR 2024 10-NEN-SAI @深圳 HOU LIVE 下沙店",
+    "date": "2024-09-19 21:00",
+    "artist": "HITORI",
+    "venue": "深圳 HOU LIVE 下沙店",
+    "seat": "",
+    "info": "https://st.music.163.com/g/show/detail?concertId=20656046&nm_style=sbt",
+    "poster": "pictures/HITORI-ESCAPE “ASIA” TOUR 2024 10-NEN-SAI @深圳 HOU LIVE 下沙店.jpg"
+  },
+  {
+    "title": "Hikaru Utada [Science Fiction] Tour 2024 in Hong Kong",
+    "date": "2024-08-18 20:00",
+    "artist": "Hikaru Utada",
+    "venue": "亞洲國際博覽館 Arena(Hall 1)",
+    "seat": "",
+    "info": "https://www.art-mate.net/doc/74500?name=%E5%AE%87%E5%A4%9A%E7%94%B0%E5%85%89%E9%A6%99%E6%B8%AF%E6%BC%94%E5%94%B1%E6%9C%832024",
+    "poster": "pictures/Hikaru Utada [Science Fiction] Tour 2024 in Hong Kong.jpg"
+  },
+  {
+    "title": "Reol Oneman Live 'No title' in Nippon Budokan",
+    "date": "2024-08-17 18:00",
+    "artist": "Reol",
+    "venue": "武道館",
+    "seat": "",
+    "info": "https://reol.jp/feature/no_title",
+    "poster": "pictures/Reol Oneman Live 'No title' in Nippon Budokan.jpg"
+  },
+  {
+    "title": "HIMEHINA LIVE 2024『涙の薫りがする』Sponsored by LIVE DAM AiR Day2",
+    "date": "2024-08-03 19:00",
+    "artist": "HIMEHINA",
+    "venue": "豊洲PIT",
+    "seat": "",
+    "info": "https://himehina.jp/pages/live2024_namidanokaori",
+    "poster": "pictures\\特典デジタルウォールペーパー_Mobile.jpg"
+  },
+  {
+    "title": "HIMEHINA LIVE 2024『涙の薫りがする』Sponsored by LIVE DAM AiR Day1",
+    "date": "2024-08-02 19:00",
+    "artist": "HIMEHINA",
+    "venue": "豊洲PIT",
+    "seat": "",
+    "info": "https://himehina.jp/pages/live2024_namidanokaori",
+    "poster": "pictures\\特典デジタルウォールペーパー_Mobile.jpg"
+  },
+  {
+    "title": "Aimer 3 nuits tour 2024 in Hong Kong",
+    "date": "2024-07-09 20:00",
+    "artist": "Aimer",
+    "venue": "亞洲國際博覽館 Hall 10",
+    "seat": "",
+    "info": "https://elf-asia.kktix.cc/events/aimer-hk2024",
+    "poster": "pictures/Aimer 3 nuits tour 2024 in Hong Kong.jpg"
+  },
+  {
+    "title": "LiVE is Smile Always〜ASiA TOUR2024〜 in Hong Kong",
+    "date": "2024-06-15 19:00",
+    "artist": "LiSA",
+    "venue": "亞洲國際博覽館 Hall 10",
+    "seat": "",
+    "info": "https://www.livenation.hk/en/lisa-2024",
+    "poster": "pictures/LiVE is Smile Always〜ASiA TOUR2024〜 in Hong Kong.jpg",
+    "poster2": "pictures/LiVE is Smile Always〜ASiA TOUR2024〜 in Hong Kong_poster2.jpg"
+  },
+  {
+    "title": "Zutomayo Intense in Hong Kong",
+    "date": "2024-06-11 20:00",
+    "artist": "Zutomayo",
+    "venue": "亞洲國際博覽館 Runway 11",
+    "seat": "",
+    "info": "https://asiaworld-expo.kktix.cc/events/zutomayohk2026",
+    "poster": "pictures/Zutomayo Intense in Hong Kong.jpg"
+  },
+  {
+    "title": "广州·HANAPOKO 2024 LIVE",
+    "date": "2024-03-09 14:00",
+    "artist": "花たん、ぽこた",
+    "venue": "廣州聲音共和Livehouse",
+    "seat": "",
+    "info": "https://show.bilibili.com/platform/detail.html?id=81279&from=pc_ticketlist",
+    "poster": "pictures/广州·HANAPOKO 2024 LIVE.jpg"
+  },
+  {
+    "title": "Reol ASIATOUR “UNBOX” at 広州 太空间 LIVE HOUSE",
+    "date": "2024-03-03 20:00",
+    "artist": "Reol",
+    "venue": "広州 太空间 LIVE HOUSE",
+    "seat": "",
+    "info": "https://reol.jp/feature/unbox_2324?_normalbrowse_=1",
+    "poster": "pictures\\Reol ASIATOUR “UNBOX”.jpg"
+  },
+  {
+    "title": "Reol ASIATOUR “UNBOX” at 深圳 Nubond Live House",
+    "date": "2024-03-02 20:00",
+    "artist": "Reol",
+    "venue": "深圳 Nubond Live House",
+    "seat": "",
+    "info": "https://reol.jp/news/detail/291",
+    "poster": "pictures\\Reol ASIATOUR “UNBOX”.jpg"
+  },
+  {
+    "title": "Ado THE FIRST WORLD TOUR “Wish” in Hong Kong",
+    "date": "2024-02-18 20:00",
+    "artist": "Ado",
+    "venue": "AsiaWorld-Expo Runway 11",
+    "seat": "Block A",
+    "info": "https://neonlit-clockenflap.kktix.cc/events/adohk2024",
+    "poster": "pictures/Ado THE FIRST WORLD TOUR “Wish” in Hong Kong.jpg"
+  },
+  {
+    "title": "HATSUNE MIKU EXPO 2019 Taiwan & Hong Kong",
+    "date": "2019-07-27 20:00",
+    "artist": "HATSUNE MIKU",
+    "venue": "KITEC STAR HALL",
+    "seat": "",
+    "info": "https://mikuexpo.com/twhk2019/",
+    "info2": "https://www.sina.cn/news/detail/4361264907990798.html",
+    "poster": "pictures\\HATSUNE MIKU EXPO 2019 Hong Kong.jpg",
+    "poster2": "pictures/HATSUNE MIKU EXPO 2019 Taiwan & Hong Kong_poster2.jpg"
+  },
+  {
+    "title": "Reol MADE IN FACTION in CHINA 广州Mao LIVE HOUSE",
+    "date": "2019-01-10 20:00",
+    "artist": "Reol",
+    "venue": "广州Mao LIVE HOUSE",
+    "seat": "",
+    "info": "https://x.com/RRReol_official/status/1065213962009010176",
+    "poster": "pictures/Reol MADE IN FACTION in CHINA 广州Mao LIVE HOUSE.jpg"
+  },
+  {
+    "title": "HATSUNE MIKU EXPO 2018 USA & Mexico",
+    "date": "2018-06-29 20:00",
+    "artist": "HATSUNE MIKU",
+    "venue": "LA, CA. Microsoft Theater",
+    "seat": "",
+    "info": "https://mikuexpo.com/usamx2018/",
+    "poster": "pictures/HATSUNE MIKU EXPO 2018 USA & Mexico.webp"
+  },
+  {
+    "title": "Animenz Live! 2017 Hong Kong 香港站",
+    "date": "2017-10-21 19:30",
+    "artist": "Animenz",
+    "venue": "環球貿易廣場(ICC)麗思卡爾頓酒店3樓耀钻宴会厅",
+    "seat": "",
+    "info": "https://x.com/Animenzzz/status/918820747237195776",
+    "poster": "pictures/Animenz Live! 2017 Hong Kong 香港站.jpg"
+  }
+]
