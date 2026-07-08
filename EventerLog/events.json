@@ -165,6 +165,15 @@
     "poster": "pictures/Vocaloid Essentials on Stage III V家鑄台絕唱III_2.jpg"
   },
   {
+    "title": "JELEE 1st LIVE「JOURNEE」",
+    "date": "2026-03-15 17:00",
+    "artist": "JELEE",
+    "venue": "厚木市文化會館大廳【神奈川縣】",
+    "seat": "",
+    "info": "",
+    "poster": "pictures/JELEE 1st LIVE「JOURNEE」.jpg"
+  },
+  {
     "title": "HIMEHINA ASIA Tour 2026『LIFETIME is BUBBLIN』 仙台",
     "date": "2026-03-14 17:30",
     "artist": "HIMEHINA",
@@ -238,6 +247,15 @@
     "seat": "",
     "info": "https://reol.jp/feature/Arena_Yokohama",
     "poster": "pictures/Reol Oneman Live「無題」in YOKOHAMA ARENA.jpg"
+  },
+  {
+    "title": "HATSUNE MIKU EXPO 2025 in Hong Kong",
+    "date": "2025-11-08 20:00",
+    "artist": "初音ミク",
+    "venue": "AsiaWorld-Arena (Hall 1)",
+    "seat": "VIP Standing",
+    "info": "https://mikuexpo.com/asia2025/",
+    "poster": "pictures/HATSUNE MIKU EXPO 2025 in Hong Kong.jpg"
   },
   {
     "title": "《進擊的巨人》— 牆外之境世界巡迴— 官方音樂會",
