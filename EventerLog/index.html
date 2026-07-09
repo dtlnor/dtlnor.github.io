@@ -135,7 +135,7 @@
         /* 【修改】取消強制單行不換行，允許中英文自動換行 */
         .ticket-title {
             white-space: normal; 
-            word-break: keep-all; 
+            overflow-wrap: break-word; 
             flex: 1;
             line-height: 1.4;
         }
@@ -181,6 +181,9 @@
     <div class="app-container" id="ticket-list"></div>
 
     <script>
+        const DEFAULT_HEADER_COLOR = '#444444';
+        const DEFAULT_HEADER_RGB = [68, 68, 68];
+
         const APP_OPTIONS = {
             layout: {
                 enableMultiColumn: true,
@@ -197,15 +200,14 @@
             return new Date(dateStr.replace(/-/g, "/"));
         }
 
-        function formatTicketDate(dateStr) {
-            const d = parseTicketDate(dateStr);
+        function formatTicketDate(dateObj) {
             const weeks = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-            const month = String(d.getMonth() + 1).padStart(2, '0');
-            const day = String(d.getDate()).padStart(2, '0');
-            const year = d.getFullYear();
-            const weekStr = weeks[d.getDay()];
-            let hours = d.getHours();
-            const minutes = String(d.getMinutes()).padStart(2, '0');
+            const month = String(dateObj.getMonth() + 1).padStart(2, '0');
+            const day = String(dateObj.getDate()).padStart(2, '0');
+            const year = dateObj.getFullYear();
+            const weekStr = weeks[dateObj.getDay()];
+            let hours = dateObj.getHours();
+            const minutes = String(dateObj.getMinutes()).padStart(2, '0');
             const ampm = hours >= 12 ? 'PM' : 'AM';
             hours = hours % 12;
             hours = hours ? hours : 12;
@@ -214,7 +216,7 @@
 
         function getPosterMainColor(posterSrc, callback) {
             if (!posterSrc) {
-                callback('#444444', [68, 68, 68]);
+                callback(DEFAULT_HEADER_COLOR, DEFAULT_HEADER_RGB);
                 return;
             }
 
@@ -233,37 +235,66 @@
                     ctx.drawImage(imgElement, 0, 0, sampleSize, sampleSize);
                     const imgData = ctx.getImageData(0, 0, sampleSize, sampleSize).data;
                     const bins = new Uint32Array(512);
-                    let maxCount = 0; let maxBinKey = 0;
                     for (let i = 0; i < imgData.length; i += 4) {
                         if (imgData[i + 3] < 128) continue;
                         const rBin = imgData[i] >> 5; const gBin = imgData[i + 1] >> 5; const bBin = imgData[i + 2] >> 5;
                         const binKey = (rBin << 6) | (gBin << 3) | bBin;
                         bins[binKey]++;
-                        if (bins[binKey] > maxCount) { maxCount = bins[binKey]; maxBinKey = binKey; }
                     }
-                    const r = ((maxBinKey >> 6) & 7) * 32 + 16; const g = ((maxBinKey >> 3) & 7) * 32 + 16; const b = (maxBinKey & 7) * 32 + 16;
+                    let bestScore = -1;
+                    let bestBinKey = 0;
+                    for (let binKey = 0; binKey < bins.length; binKey++) {
+                        const count = bins[binKey];
+                        if (!count) continue;
+
+                        const r = ((binKey >> 6) & 7) * 32 + 16;
+                        const g = ((binKey >> 3) & 7) * 32 + 16;
+                        const b = (binKey & 7) * 32 + 16;
+
+                        const maxChannel = Math.max(r, g, b);
+                        const minChannel = Math.min(r, g, b);
+                        const saturation = maxChannel === 0 ? 0 : (maxChannel - minChannel) / maxChannel;
+                        const luminance = (r * 299 + g * 587 + b * 114) / 255000;
+                        const midTone = 1 - Math.min(1, Math.abs(luminance - 0.5) * 2);
+
+                        const score = count * (0.4 + saturation * 0.8) * (0.25 + midTone * 0.75);
+                        if (score > bestScore) {
+                            bestScore = score;
+                            bestBinKey = binKey;
+                        }
+                    }
+
+                    const r = ((bestBinKey >> 6) & 7) * 32 + 16; const g = ((bestBinKey >> 3) & 7) * 32 + 16; const b = (bestBinKey & 7) * 32 + 16;
                     callback(`rgb(${r}, ${g}, ${b})`, [r, g, b]);
                 } catch (e) {
-                    callback('#444444', [68, 68, 68]);
+                    callback(DEFAULT_HEADER_COLOR, DEFAULT_HEADER_RGB);
                 }
             };
 
             imgElement.addEventListener('load', extractColor);
             imgElement.addEventListener('error', function () {
-                callback('#444444', [68, 68, 68]);
+                callback(DEFAULT_HEADER_COLOR, DEFAULT_HEADER_RGB);
             });
             imgElement.src = posterSrc;
         }
 
-        function toCssLength(value, fallback = '') {
+        function normalizeNumberishValue(value, unit, fallback = '') {
             if (value === null || value === undefined || value === '') return fallback;
-            if (typeof value === 'number' && Number.isFinite(value)) return `${value}px`;
+            if (typeof value === 'number' && Number.isFinite(value)) return `${value}${unit}`;
             if (typeof value === 'string') {
                 const trimmed = value.trim();
                 if (!trimmed) return fallback;
-                return /^-?\d+(\.\d+)?$/.test(trimmed) ? `${trimmed}px` : trimmed;
+                return /^-?\d+(\.\d+)?$/.test(trimmed) ? `${trimmed}${unit}` : trimmed;
             }
             return fallback;
+        }
+
+        function toCssLength(value, fallback = '') {
+            return normalizeNumberishValue(value, 'px', fallback);
+        }
+
+        function toPercentValue(value, fallback) {
+            return normalizeNumberishValue(value, '%', fallback);
         }
 
         function applyLayoutOptions(container) {
@@ -282,16 +313,7 @@
             container.style.maxWidth = `calc(${safeMaxColumns} * var(--column-min-width) + ${(safeMaxColumns - 1)} * var(--app-gap))`;
         }
 
-        function getGroupKey(dateObj) {
-            const year = dateObj.getFullYear();
-            const month = String(dateObj.getMonth() + 1).padStart(2, '0');
-            const mode = APP_OPTIONS.grouping.mode;
-            if (mode === 'year') return String(year);
-            if (mode === 'month') return month;
-            return `${year}-${month}`;
-        }
-
-        function getGroupLabel(dateObj) {
+        function getGroupValue(dateObj) {
             const year = dateObj.getFullYear();
             const month = String(dateObj.getMonth() + 1).padStart(2, '0');
             const mode = APP_OPTIONS.grouping.mode;
@@ -313,17 +335,6 @@
         function getPosterContainerStyle(ticket) {
             const paddingValue = toCssLength(ticket.posterPadding);
             return paddingValue ? `padding:${paddingValue};` : '';
-        }
-
-        function toPercentValue(value, fallback) {
-            if (value === null || value === undefined || value === '') return fallback;
-            if (typeof value === 'number' && Number.isFinite(value)) return `${value}%`;
-            if (typeof value === 'string') {
-                const trimmed = value.trim();
-                if (!trimmed) return fallback;
-                return /^-?\d+(\.\d+)?$/.test(trimmed) ? `${trimmed}%` : trimmed;
-            }
-            return fallback;
         }
 
         function getPosterPosition(ticket) {
@@ -363,16 +374,16 @@
                 ticketData.forEach((ticket, index) => {
                     const ticketDate = parseTicketDate(ticket.date);
                     if (APP_OPTIONS.grouping.enabled) {
-                        const currentGroupKey = getGroupKey(ticketDate);
+                        const currentGroupKey = getGroupValue(ticketDate);
                         if (currentGroupKey !== lastGroupKey) {
-                            appendGroupDivider(listContainer, getGroupLabel(ticketDate));
+                            appendGroupDivider(listContainer, currentGroupKey);
                             lastGroupKey = currentGroupKey;
                         }
                     }
 
                     const card = document.createElement('div');
                     card.className = 'ticket-card';
-                    const dynamicDisplayDate = formatTicketDate(ticket.date);
+                    const dynamicDisplayDate = formatTicketDate(ticketDate);
                     const posterContainerStyle = getPosterContainerStyle(ticket);
                     const posterImageStyle = getPosterImageStyle(ticket);
 
