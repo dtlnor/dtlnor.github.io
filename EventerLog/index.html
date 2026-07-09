@@ -345,14 +345,15 @@
         }
 
         function getVenueDisplay(ticket) {
-            const venueText = ticket.venue || '';
-            if (!venueText) return '&nbsp;';
+            const venueText = typeof ticket.venue === 'string' ? ticket.venue.trim() : '';
+            if (!venueText) return '';
+
             const flag = typeof ticket.flag === 'string' ? ticket.flag.trim().toLowerCase() : '';
+            let flagHtml = '';
             if (/^[a-z]{2}$/.test(flag)) {
-                return `<img class="venue-flag" src="https://flagcdn.com/${flag}.svg" alt="${flag} flag" loading="lazy"> ${venueText}`;
+                flagHtml = `<img class="venue-flag" src="https://flagcdn.com/${flag}.svg" alt="${flag} flag" loading="lazy"> `;
             }
-            const venueIcon = ticket.venueIcon || '📍';
-            return `${venueIcon} ${venueText}`;
+            return `${flagHtml}${venueText}`;
         }
 
         function getPosterImageStyle(ticket) {
