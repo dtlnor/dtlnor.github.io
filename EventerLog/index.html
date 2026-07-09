@@ -158,6 +158,22 @@
         .info-artist {
             color: var(--text-main);
         }
+
+        .venue-line {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            min-height: 16px;
+        }
+
+        .venue-flag {
+            width: 16px;
+            height: 12px;
+            border-radius: 2px;
+            object-fit: cover;
+            flex-shrink: 0;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+        }
     </style>
 </head>
 
@@ -317,6 +333,17 @@
             return `${x} ${y}`;
         }
 
+        function getVenueDisplay(ticket) {
+            const venueText = ticket.venue || '';
+            if (!venueText) return '&nbsp;';
+            const flag = typeof ticket.flag === 'string' ? ticket.flag.trim().toLowerCase() : '';
+            if (/^[a-z]{2}$/.test(flag)) {
+                return `<img class="venue-flag" src="https://flagcdn.com/${flag}.svg" alt="${flag} flag" loading="lazy"> ${venueText}`;
+            }
+            const venueIcon = ticket.venueIcon || '📍';
+            return `${venueIcon} ${venueText}`;
+        }
+
         function getPosterImageStyle(ticket) {
             const styles = [];
             styles.push(`object-position:${getPosterPosition(ticket)};`);
@@ -361,7 +388,7 @@
                             <div class="info-body">
                                 <div class="info-time">${dynamicDisplayDate}</div>
                                 <div class="info-artist">${ticket.artist.replace(/\n/g, '<br>')}</div>
-                                <div>${ticket.venue}</div>
+                                <div class="venue-line">${getVenueDisplay(ticket)}</div>
                                 <div>${ticket.seat || '&nbsp;'}</div>
                             </div>
                         </div>
