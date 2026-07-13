@@ -254,12 +254,9 @@
             const day = String(dateObj.getDate()).padStart(2, '0');
             const year = dateObj.getFullYear();
             const weekStr = weeks[dateObj.getDay()];
-            let hours = dateObj.getHours();
+            const hours = String(dateObj.getHours()).padStart(2, '0');
             const minutes = String(dateObj.getMinutes()).padStart(2, '0');
-            const ampm = hours >= 12 ? 'PM' : 'AM';
-            hours = hours % 12;
-            hours = hours ? hours : 12;
-            return `${year}-${month}-${day} (${weekStr}) ${String(hours).padStart(2, '0')}:${minutes} ${ampm}`;
+            return `${year}-${month}-${day} (${weekStr}) ${hours}:${minutes}`;
         }
 
         function getPosterMainColor(posterSrc, callback) {
