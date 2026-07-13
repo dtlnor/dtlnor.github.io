@@ -196,6 +196,54 @@
             }
         };
 
+        function parseYearMonthValue(value) {
+            if (typeof value !== 'string') return null;
+            const match = value.trim().match(/^(\d{4})-(\d{2})$/);
+            if (!match) return null;
+            const year = Number(match[1]);
+            const month = Number(match[2]);
+            if (month < 1 || month > 12) return null;
+            return year * 100 + month;
+        }
+
+        function applyQueryOptions() {
+            const params = new URLSearchParams(window.location.search);
+            const cols = Number(params.get('cols'));
+            if (Number.isFinite(cols) && cols > 0) {
+                APP_OPTIONS.layout.enableMultiColumn = cols > 1;
+                APP_OPTIONS.layout.maxColumns = Math.floor(cols);
+            }
+
+            const minColWidth = Number(params.get('minColWidth'));
+            if (Number.isFinite(minColWidth) && minColWidth > 120) {
+                APP_OPTIONS.layout.minColumnWidth = minColWidth;
+            }
+
+            const grouping = params.get('grouping');
+            if (grouping === 'off') {
+                APP_OPTIONS.grouping.enabled = false;
+            } else if (grouping === 'year' || grouping === 'month' || grouping === 'year-month') {
+                APP_OPTIONS.grouping.enabled = true;
+                APP_OPTIONS.grouping.mode = grouping;
+            }
+
+            return {
+                startYm: parseYearMonthValue(params.get('startYm')),
+                endYm: parseYearMonthValue(params.get('endYm'))
+            };
+        }
+
+        function filterByYearMonthRange(ticketData, rangeOptions) {
+            if (!rangeOptions.startYm && !rangeOptions.endYm) return ticketData;
+            const lower = Math.min(rangeOptions.startYm ?? Number.MIN_SAFE_INTEGER, rangeOptions.endYm ?? Number.MAX_SAFE_INTEGER);
+            const upper = Math.max(rangeOptions.startYm ?? Number.MIN_SAFE_INTEGER, rangeOptions.endYm ?? Number.MAX_SAFE_INTEGER);
+            return ticketData.filter(ticket => {
+                const ticketDate = parseTicketDate(ticket.date);
+                const ymValue = ticketDate.getFullYear() * 100 + (ticketDate.getMonth() + 1);
+                return ymValue >= lower && ymValue <= upper;
+            });
+        }
+
         function parseTicketDate(dateStr) {
             return new Date(dateStr.replace(/-/g, "/"));
         }
@@ -211,7 +259,7 @@
             const ampm = hours >= 12 ? 'PM' : 'AM';
             hours = hours % 12;
             hours = hours ? hours : 12;
-            return `${month}/${day}/${year} (${weekStr}) ${String(hours).padStart(2, '0')}:${minutes} ${ampm}`;
+            return `${year}-${month}-${day} (${weekStr}) ${String(hours).padStart(2, '0')}:${minutes} ${ampm}`;
         }
 
         function getPosterMainColor(posterSrc, callback) {
@@ -356,6 +404,11 @@
             return `${flagHtml}${venueText}`;
         }
 
+        function getVenueRowHtml(ticket) {
+            const venueDisplay = getVenueDisplay(ticket);
+            return venueDisplay ? `<div class="venue-line">${venueDisplay}</div>` : '';
+        }
+
         function getPosterImageStyle(ticket) {
             const styles = [];
             styles.push(`object-position:${getPosterPosition(ticket)};`);
@@ -363,12 +416,15 @@
             return styles.join('');
         }
 
+        const rangeOptions = applyQueryOptions();
         const listContainer = document.getElementById('ticket-list');
         applyLayoutOptions(listContainer);
+        window.__EVENTER_READY__ = false;
 
         fetch('events.json')
             .then(response => response.json())
             .then(ticketData => {
+                ticketData = filterByYearMonthRange(ticketData, rangeOptions);
                 ticketData.sort((a, b) => parseTicketDate(b.date) - parseTicketDate(a.date));
                 let lastGroupKey = null;
 
@@ -400,7 +456,7 @@
                             <div class="info-body">
                                 <div class="info-time">${dynamicDisplayDate}</div>
                                 <div class="info-artist">${ticket.artist.replace(/\n/g, '<br>')}</div>
-                                <div class="venue-line">${getVenueDisplay(ticket)}</div>
+                                ${getVenueRowHtml(ticket)}
                                 <div>${ticket.seat || '&nbsp;'}</div>
                             </div>
                         </div>
@@ -423,8 +479,12 @@
                         headerEl.style.color = brightness > 185 ? '#1d1d1f' : '#ffffff';
                     });
                 });
+                window.__EVENTER_READY__ = true;
             })
-            .catch(error => { listContainer.innerHTML = `<p style="color:red; text-align:center;">數據加載失敗: ${error}</p>`; });
+            .catch(error => {
+                listContainer.innerHTML = `<p style="color:red; text-align:center;">數據加載失敗: ${error}</p>`;
+                window.__EVENTER_READY__ = true;
+            });
     </script>
 </body>
 </html>
