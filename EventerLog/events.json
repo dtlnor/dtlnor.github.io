@@ -23,7 +23,7 @@
     "title": "TOGENASHI TOGEARI  Live in HONG KONG「凜音の理」",
     "date": "2026-10-02 00:00",
     "artist": "TOGENASHI TOGEARI",
-    "venue": "AsiaWorld-Summit (亞洲國際博覽館 2 號展館)",
+    "venue": "AsiaWorld-Summit",
     "flag": "hk",
     "seat": "",
     "info": "https://x.com/girlsbandcry/status/2079385874111074402",
@@ -108,7 +108,7 @@
     "flag": "tw",
     "seat": "1F Standing",
     "info": "",
-    "poster": "pictures/HIMEHINA ASIA Tour 2026『LIFETIME is BUBBLIN』in TAIPEI.png"
+    "poster": "pictures/HIMEHINA ASIA Tour 2026『LIFETIME is BUBBLIN』in TAIPEI.jpeg"
   },
   {
     "title": "花譜| 宿聲in Hong Kong",
@@ -580,6 +580,16 @@
     "info": "https://himehina.jp/pages/live2024_namidanokaori_tour",
     "poster": "pictures/HIMEHINA全国ツアー(西) 『涙の薫りがする』.png",
     "posterPositionX": 20
+  },
+  {
+    "title": "トゲナシトゲアリ 5th ONE-MAN LIVE 『鳴動の刻』",
+    "date": "2025-02-07 19:00",
+    "artist": "トゲナシトゲアリ",
+    "venue": "パシフィコ横浜 国立大ホール",
+    "flag": "jp",
+    "seat": "3階 D6列 73番",
+    "info": "https://x.com/girlsbandcry/status/1879121567625671026",
+    "poster": "pictures/トゲナシトゲアリ 5th ONE-MAN LIVE 『鳴動の刻』.jpg"
   },
   {
     "title": "Reol Oneman Live 2025 カルチュア・カリキュラム at.ZEPP OSAKA BAYSIDE",
