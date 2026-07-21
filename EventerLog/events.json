@@ -20,14 +20,14 @@
     "poster": "pictures/「HIMEHINA WORLD Tour 2026 Final 2Days」Day1『ヒメヒナウタミタ祭 ～負けないでもう少し最後まで走り抜けて～』.webp"
   },
   {
-    "title": "TOGENASHI TOGEARI 香港演唱會 2026",
+    "title": "TOGENASHI TOGEARI  Live in HONG KONG「凜音の理」",
     "date": "2026-10-02 00:00",
     "artist": "TOGENASHI TOGEARI",
-    "venue": "",
+    "venue": "AsiaWorld-Summit (亞洲國際博覽館 2 號展館)",
     "flag": "hk",
     "seat": "",
-    "info": "",
-    "poster": "pictures/TOGENASHI TOGEARI 香港演唱會 2026.png"
+    "info": "https://x.com/girlsbandcry/status/2079385874111074402",
+    "poster": "pictures/TOGENASHI TOGEARI  Live in HONG KONG「凜音の理」.jpg"
   },
   {
     "title": "HIMEHINA WORLD Tour 2026『LIFETIME is BUBBLIN』in Tokyo",
@@ -37,7 +37,7 @@
     "flag": "jp",
     "seat": "",
     "info": "",
-    "poster": "pictures\\「HIMEHINA WORLD Tour 2026 Final 2Days」Day2『LIFETIME is BUBBLIN -GRAND FINALE-』.png"
+    "poster": "pictures\\HIMEHINA WORLD Tour 2026『LIFETIME is BUBBLIN』.png"
   },
   {
     "title": "Reol Oneman Live 2026 美辭學 in TAIPEI",
@@ -108,7 +108,7 @@
     "flag": "tw",
     "seat": "1F Standing",
     "info": "",
-    "poster": "pictures/HIMEHINA ASIA Tour 2026『LIFETIME is BUBBLIN』in TAIPEI.jpg"
+    "poster": "pictures/HIMEHINA ASIA Tour 2026『LIFETIME is BUBBLIN』in TAIPEI.png"
   },
   {
     "title": "花譜| 宿聲in Hong Kong",
@@ -160,7 +160,7 @@
     "flag": "jp",
     "seat": "Sエリア スタンディング",
     "info": "",
-    "poster": "pictures/HIMEHINA ASIA Tour 2026『LIFETIME is BUBBLIN』 名古屋.jpg"
+    "poster": "pictures/HIMEHINA ASIA Tour 2026『LIFETIME is BUBBLIN』.jpg"
   },
   {
     "title": "Vocaloid Essentials on Stage III V家鑄台絕唱III",
@@ -180,7 +180,7 @@
     "flag": "hk",
     "seat": "E區",
     "info": "",
-    "poster": "pictures/Vocaloid Essentials on Stage III V家鑄台絕唱III_2.jpg"
+    "poster": "pictures/Vocaloid Essentials on Stage III V家鑄台絕唱III.jpg"
   },
   {
     "title": "JELEE 1st LIVE「JOURNEE」",
@@ -200,7 +200,7 @@
     "flag": "jp",
     "seat": "Sエリア スタンディング",
     "info": "",
-    "poster": "pictures/HIMEHINA ASIA Tour 2026『LIFETIME is BUBBLIN』 仙台.jpg"
+    "poster": "pictures/HIMEHINA ASIA Tour 2026『LIFETIME is BUBBLIN』.jpg"
   },
   {
     "title": "MyGO!!!!!×Ave Mujica ツーマンライブ「“moment / memory”」",
@@ -231,7 +231,7 @@
     "flag": "jp",
     "seat": "Sエリア スタンディング",
     "info": "",
-    "poster": "pictures/HIMEHINA ASIA Tour 2026『LIFETIME is BUBBLIN』 大阪.jpg"
+    "poster": "pictures/HIMEHINA ASIA Tour 2026『LIFETIME is BUBBLIN』.jpg"
   },
   {
     "title": "HIMEHINA ASIA Tour 2026『LIFETIME is BUBBLIN』 福岡",
@@ -241,7 +241,7 @@
     "flag": "jp",
     "seat": "Sエリア スタンディング",
     "info": "",
-    "poster": "pictures/HIMEHINA ASIA Tour 2026『LIFETIME is BUBBLIN』 福岡.jpg"
+    "poster": "pictures/HIMEHINA ASIA Tour 2026『LIFETIME is BUBBLIN』.jpg"
   },
   {
     "title": "HIMEHINA LIVE 2025『LIFETIME is BUBBLIN』Day2",
@@ -251,7 +251,7 @@
     "flag": "jp",
     "seat": "Sエリア《通し特典付き》",
     "info": "",
-    "poster": "pictures/HIMEHINA LIVE 2025『LIFETIME is BUBBLIN』Day2.png",
+    "poster": "pictures/HIMEHINA LIVE 2025『LIFETIME is BUBBLIN』.png",
     "posterPositionX": 70
   },
   {
@@ -262,7 +262,7 @@
     "flag": "jp",
     "seat": "Sエリア《通し特典付き》",
     "info": "",
-    "poster": "pictures/HIMEHINA LIVE 2025『LIFETIME is BUBBLIN』Day1.png",
+    "poster": "pictures/HIMEHINA LIVE 2025『LIFETIME is BUBBLIN』.png",
     "posterPositionX": 70
   },
   {
@@ -374,8 +374,7 @@
     "flag": "jp",
     "seat": "Seat",
     "info": "https://himehina.jp/post/post-383",
-    "poster": "pictures/HIMEHINA FAN MEETING Vol.1『バブリン総会』《夜の部》.png",
-    "poster2": "pictures/HIMEHINA FAN MEETING Vol.1『バブリン総会』《夜の部》_poster2.png"
+    "poster": "pictures/HIMEHINA FAN MEETING Vol.1『バブリン総会』.png"
   },
   {
     "title": "HIMEHINA 2on1 撮影会 ～夏の終わりの両手にヒメヒナ～ ",
@@ -396,8 +395,7 @@
     "flag": "jp",
     "seat": "Seat",
     "info": "https://himehina.jp/post/post-383",
-    "poster": "pictures/HIMEHINA FAN MEETING Vol.1『バブリン総会』《昼の部》.png",
-    "poster2": "pictures/HIMEHINA FAN MEETING Vol.1『バブリン総会』《昼の部》_poster2.png"
+    "poster": "pictures/HIMEHINA FAN MEETING Vol.1『バブリン総会』.png"
   },
   {
     "title": "Reol Oneman Live 'No title' in SHANGHAI at 静安体育中心 JING'AN SPORTS CENTER",
@@ -508,7 +506,7 @@
     "flag": "jp",
     "seat": "5 LEVEL 22列 51番",
     "info": "https://bang-dream.com/events/mygo-avemujica2025/",
-    "poster": "pictures/MyGO!!!!!×Ave Mujica 合同ライブ「わかれ道の、その先へ」DAY2 _ Geosmin.jpg"
+    "poster": "pictures/MyGO!!!!!×Ave Mujica 合同ライブ「わかれ道の、その先へ」.jpg"
   },
   {
     "title": "MyGO!!!!!×Ave Mujica 合同ライブ「わかれ道の、その先へ」DAY1 : Petrichor",
@@ -518,7 +516,7 @@
     "flag": "jp",
     "seat": "5 LEVEL 22列 51番",
     "info": "https://bang-dream.com/events/mygo-avemujica2025/",
-    "poster": "pictures/MyGO!!!!!×Ave Mujica 合同ライブ「わかれ道の、その先へ」DAY1 _ Petrichor.jpg"
+    "poster": "pictures/MyGO!!!!!×Ave Mujica 合同ライブ「わかれ道の、その先へ」.jpg"
   },
   {
     "title": "花たん China Livetour 2025 in 広州＆上海",
@@ -580,7 +578,7 @@
     "flag": "jp",
     "seat": "",
     "info": "https://himehina.jp/pages/live2024_namidanokaori_tour",
-    "poster": "pictures/HIMEHINA全国ツアー(西) 『涙の薫りがする』名古屋公演.png",
+    "poster": "pictures/HIMEHINA全国ツアー(西) 『涙の薫りがする』.png",
     "posterPositionX": 20
   },
   {
@@ -601,7 +599,7 @@
     "flag": "jp",
     "seat": "",
     "info": "https://himehina.jp/pages/live2024_namidanokaori_tour",
-    "poster": "pictures/HIMEHINA全国ツアー(西) 『涙の薫りがする』大阪公演.png",
+    "poster": "pictures/HIMEHINA全国ツアー(西) 『涙の薫りがする』.png",
     "posterPositionX": 20
   },
   {
@@ -612,7 +610,7 @@
     "flag": "jp",
     "seat": "",
     "info": "https://himehina.jp/pages/live2024_namidanokaori_tour",
-    "poster": "pictures/HIMEHINA全国ツアー(西) 『涙の薫りがする』福岡公演.png",
+    "poster": "pictures/HIMEHINA全国ツアー(西) 『涙の薫りがする』.png",
     "posterPositionX": 20
   },
   {
