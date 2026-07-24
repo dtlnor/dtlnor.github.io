@@ -1,5 +1,26 @@
 [
   {
+    "title": "BanG Dream! 13th☆LIVE DAY2 : 夢限大みゅーたいぷ「DIMENSIONAL OVERLAP」",
+    "date": "2026-10-11 18:00",
+    "artist": "夢限大みゅーたいぷ",
+    "venue": "東京ガーデンシアター",
+    "flag": "jp",
+    "seat": "",
+    "info": "https://bang-dream.com/events/13th-live-day2/",
+    "poster": "pictures\\BanG Dream! 13th☆LIVE DAY2  夢限大みゅーたいぷ「DIMENSIONAL OVERLAP」.jpg",
+    "posterFit": "contain"
+  },
+  {
+    "title": "LEGACY ZOMBIE LABO 「文禍伝雷」奈良・平城京",
+    "date": "2026-10-10 17:30",
+    "artist": "ZUTOMAYO",
+    "venue": "平城宮跡歴史公園 中央区朝堂院 特設野外会場",
+    "flag": "jp",
+    "seat": "",
+    "info": "https://zutomayo.net/bunka-denrai/",
+    "poster": "pictures\\LEGACY ZOMBIE LABO 「文禍伝雷」奈良・平城京.jpeg"
+  },
+  {
     "title": "「HIMEHINA WORLD Tour 2026 Final 2Days」Day2『LIFETIME is BUBBLIN -GRAND FINALE-』",
     "date": "2026-10-04 18:00",
     "artist": "HIMEHINA",
