@@ -13,8 +13,6 @@
             --text-sub: #666666;
             --border-dash: #cccccc;
             --app-gap: 14px;
-            --single-column-max-width: 420px;
-            --column-min-width: 340px;
         }
 
         body {
@@ -28,7 +26,6 @@
 
         .app-container {
             width: 100%;
-            max-width: var(--single-column-max-width);
             display: flex;
             flex-direction: column;
             gap: var(--app-gap);
@@ -114,7 +111,7 @@
             padding: 12px 14px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: space-evenly;
             overflow: hidden;
         }
 
@@ -187,8 +184,7 @@
         const APP_OPTIONS = {
             layout: {
                 enableMultiColumn: true,
-                maxColumns: 3,
-                minColumnWidth: 340
+                minColumnWidth: 420
             },
             grouping: {
                 enabled: true,
@@ -211,11 +207,10 @@
             const cols = Number(params.get('cols'));
             if (Number.isFinite(cols) && cols > 0) {
                 APP_OPTIONS.layout.enableMultiColumn = cols > 1;
-                APP_OPTIONS.layout.maxColumns = Math.floor(cols);
             }
 
             const minColWidth = Number(params.get('minColWidth'));
-            if (Number.isFinite(minColWidth) && minColWidth > 120) {
+            if (Number.isFinite(minColWidth) && minColWidth > 0) {
                 APP_OPTIONS.layout.minColumnWidth = minColWidth;
             }
 
@@ -343,19 +338,16 @@
         }
 
         function applyLayoutOptions(container) {
-            const { enableMultiColumn, maxColumns, minColumnWidth } = APP_OPTIONS.layout;
+            const { enableMultiColumn, minColumnWidth } = APP_OPTIONS.layout;
             if (!enableMultiColumn) {
                 container.classList.remove('multi-column');
-                container.style.maxWidth = 'var(--single-column-max-width)';
                 return;
             }
 
-            const safeMaxColumns = Math.max(1, Number(maxColumns) || 1);
-            const minWidth = toCssLength(minColumnWidth, '340px');
+            const minWidth = toCssLength(minColumnWidth);
 
             container.classList.add('multi-column');
             container.style.setProperty('--column-min-width', minWidth);
-            container.style.maxWidth = `calc(${safeMaxColumns} * var(--column-min-width) + ${(safeMaxColumns - 1)} * var(--app-gap))`;
         }
 
         function getGroupValue(dateObj) {
