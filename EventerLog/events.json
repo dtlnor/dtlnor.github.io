@@ -61,14 +61,34 @@
     "poster": "pictures\\HIMEHINA WORLD Tour 2026『LIFETIME is BUBBLIN』.png"
   },
   {
+    "title": "HITORIE HITORI-ESCAPE ASIA TOUR 2026 in Hong Kong",
+    "date": "2026-08-03 17:30",
+    "artist": "HITORIE",
+    "venue": "PORTAL",
+    "flag": "hk",
+    "seat": "GA",
+    "info": "",
+    "poster": "pictures\\HITORIE HITORI-ESCAPE ASIA TOUR 2026 in Hong Kong.webp"
+  },
+  {
     "title": "Reol Oneman Live 2026 美辭學 in TAIPEI",
     "date": "2026-07-26 18:00",
     "artist": "Reol",
     "venue": "Zepp New Taipei",
     "flag": "tw",
     "seat": "",
-    "info": "pictures\\Reol Oneman Live 2026 美辞学 at 桜坂セントラル.jpeg",
+    "info": "",
     "poster": "pictures/Reol Oneman Live 2026 美辭學 in TAIPEI.jpg"
+  },
+  {
+    "title": "【26漫博】「HACHI SPECIAL LIVE STAGE」",
+    "date": "2026-07-26 14:20",
+    "artist": "HACHI",
+    "venue": "ICHIBAN JAPAN 日本館舞台區",
+    "flag": "tw",
+    "seat": "",
+    "info": "https://x.com/RKMusic_inc/status/2081190968188150000",
+    "poster": "pictures\\HACHI_キービジュアル.jpg"
   },
   {
     "title": "LiSA - LiVE is Smile Always～15～ in Hong Kong",
