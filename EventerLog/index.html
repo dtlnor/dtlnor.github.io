@@ -228,29 +228,62 @@
             };
         }
 
+        function parseTicketDateInfo(dateStr) {
+            if (typeof dateStr !== 'string') return null;
+
+            const match = dateStr.trim().match(/^(\d{4})-(\d{2})-(\d{2})\s+(\d{2}):(\d{2})(?::(\d{2}))?$/);
+            if (!match) return null;
+
+            const year = Number(match[1]);
+            const month = Number(match[2]);
+            const day = Number(match[3]);
+            const hour = Number(match[4]);
+            const minute = Number(match[5]);
+            const second = Number(match[6] || '0');
+
+            const baseDate = new Date(year, month - 1, day);
+            if (
+                baseDate.getFullYear() !== year ||
+                baseDate.getMonth() !== month - 1 ||
+                baseDate.getDate() !== day
+            ) {
+                return null;
+            }
+
+            const normalizedDate = new Date(year, month - 1, day, hour, minute, second);
+
+            return {
+                year,
+                month,
+                day,
+                hour,
+                minute,
+                second,
+                normalizedDate,
+                ymValue: year * 100 + month
+            };
+        }
+
         function filterByYearMonthRange(ticketData, rangeOptions) {
             if (!rangeOptions.startYm && !rangeOptions.endYm) return ticketData;
             const lower = Math.min(rangeOptions.startYm ?? Number.MIN_SAFE_INTEGER, rangeOptions.endYm ?? Number.MAX_SAFE_INTEGER);
             const upper = Math.max(rangeOptions.startYm ?? Number.MIN_SAFE_INTEGER, rangeOptions.endYm ?? Number.MAX_SAFE_INTEGER);
             return ticketData.filter(ticket => {
-                const ticketDate = parseTicketDate(ticket.date);
-                const ymValue = ticketDate.getFullYear() * 100 + (ticketDate.getMonth() + 1);
+                const ticketDate = parseTicketDateInfo(ticket.date);
+                if (!ticketDate) return false;
+                const ymValue = ticketDate.ymValue;
                 return ymValue >= lower && ymValue <= upper;
             });
         }
 
-        function parseTicketDate(dateStr) {
-            return new Date(dateStr.replace(/-/g, "/"));
-        }
-
-        function formatTicketDate(dateObj) {
+        function formatTicketDate(dateInfo) {
             const weeks = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-            const month = String(dateObj.getMonth() + 1).padStart(2, '0');
-            const day = String(dateObj.getDate()).padStart(2, '0');
-            const year = dateObj.getFullYear();
-            const weekStr = weeks[dateObj.getDay()];
-            const hours = String(dateObj.getHours()).padStart(2, '0');
-            const minutes = String(dateObj.getMinutes()).padStart(2, '0');
+            const month = String(dateInfo.month).padStart(2, '0');
+            const day = String(dateInfo.day).padStart(2, '0');
+            const year = dateInfo.year;
+            const weekStr = weeks[new Date(year, dateInfo.month - 1, dateInfo.day).getDay()];
+            const hours = String(dateInfo.hour).padStart(2, '0');
+            const minutes = String(dateInfo.minute).padStart(2, '0');
             return `${year}-${month}-${day} (${weekStr}) ${hours}:${minutes}`;
         }
 
@@ -351,8 +384,8 @@
         }
 
         function getGroupValue(dateObj) {
-            const year = dateObj.getFullYear();
-            const month = String(dateObj.getMonth() + 1).padStart(2, '0');
+            const year = dateObj.year;
+            const month = String(dateObj.month).padStart(2, '0');
             const mode = APP_OPTIONS.grouping.mode;
             if (mode === 'year') return String(year);
             if (mode === 'month') return month;
@@ -414,11 +447,18 @@
             .then(response => response.json())
             .then(ticketData => {
                 ticketData = filterByYearMonthRange(ticketData, rangeOptions);
-                ticketData.sort((a, b) => parseTicketDate(b.date) - parseTicketDate(a.date));
+                ticketData.sort((a, b) => {
+                    const aInfo = parseTicketDateInfo(a.date);
+                    const bInfo = parseTicketDateInfo(b.date);
+                    const aTime = aInfo ? aInfo.normalizedDate.getTime() : Number.NEGATIVE_INFINITY;
+                    const bTime = bInfo ? bInfo.normalizedDate.getTime() : Number.NEGATIVE_INFINITY;
+                    return bTime - aTime;
+                });
                 let lastGroupKey = null;
 
                 ticketData.forEach((ticket, index) => {
-                    const ticketDate = parseTicketDate(ticket.date);
+                    const ticketDate = parseTicketDateInfo(ticket.date);
+                    if (!ticketDate) return;
                     if (APP_OPTIONS.grouping.enabled) {
                         const currentGroupKey = getGroupValue(ticketDate);
                         if (currentGroupKey !== lastGroupKey) {
