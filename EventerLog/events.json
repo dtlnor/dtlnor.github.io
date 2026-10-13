@@ -1,5 +1,16 @@
 [
   {
+    "title": "HIMEHINA 日本武道館ワンマンライブ",
+    "date": "2027-07-13 00:00",
+    "artist": "HIMEHINA",
+    "venue": "日本武道館",
+    "flag": "jp",
+    "seat": "",
+    "info": "https://spc.himehina.jp/LiveatBudokan27",
+    "poster": "pictures\\HIMEHINA 日本武道館ワンマンライブ.jpg",
+    "posterFit": "contain"
+  },
+  {
     "title": "Reol Secret Live 極秘LEGIT #2 東の宴",
     "date": "2026-12-15 18:30",
     "artist": "Reol",
@@ -27,8 +38,17 @@
     "flag": "jp",
     "seat": "",
     "info": "https://bang-dream.com/events/13th-live-day2/",
-    "poster": "pictures\\BanG Dream! 13th☆LIVE DAY2  夢限大みゅーたいぷ「DIMENSIONAL OVERLAP」.jpg",
-    "posterFit": "contain"
+    "poster": "pictures\\BanG Dream! 13th☆LIVE DAY2  夢限大みゅーたいぷ「DIMENSIONAL OVERLAP」.jpg"
+  },
+  {
+    "title": "VIIIHIVE Showcase",
+    "date": "2026-10-10 24:30",
+    "artist": "HACHI、Avec Avec、水槽、砂守岳央（未来古代楽団)、DÉ DÉ MOUSE、龍ヶ崎リン",
+    "venue": "代官山UNIT",
+    "flag": "jp",
+    "seat": "",
+    "info": "https://rkmusic.jp/info/987/",
+    "poster": "pictures\\FIX-VIIHIVE_Showcase-KV-0917-2.jpg"
   },
   {
     "title": "LEGACY ZOMBIE LABO 「文禍伝雷」奈良・平城京",
