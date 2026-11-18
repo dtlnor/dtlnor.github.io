@@ -11,6 +11,66 @@
     "posterFit": "contain"
   },
   {
+    "title": "ヰ世界情緒 4th ONE-MAN LIVE 「Anima Ⅳ」Day2",
+    "date": "2027-03-25 17:30",
+    "artist": "ヰ世界情緒",
+    "venue": "横浜BUNTAI",
+    "flag": "jp",
+    "seat": "",
+    "info": "https://isekaijoucho.kamitsubaki.jp/contents/1116740",
+    "poster": "pictures\\ヰ世界情緒 4th ONE-MAN LIVE 「Anima Ⅳ」.jpg"
+  },
+  {
+    "title": "ヰ世界情緒 4th ONE-MAN LIVE 「Anima Ⅳ」Day1",
+    "date": "2027-03-24 18:00",
+    "artist": "ヰ世界情緒",
+    "venue": "横浜BUNTAI",
+    "flag": "jp",
+    "seat": "",
+    "info": "https://isekaijoucho.kamitsubaki.jp/contents/1116740",
+    "poster": "pictures\\ヰ世界情緒 4th ONE-MAN LIVE 「Anima Ⅳ」.jpg"
+  },
+  {
+    "title": "HACHI 5th ONE-MAN Live Tour \"NOCTILICA\"",
+    "date": "2027-03-22 00:00",
+    "artist": "HACHI",
+    "venue": "SUPERNOVA KAWASAKI",
+    "flag": "jp",
+    "seat": "",
+    "info": "https://x.com/8HaChi_hacchi/status/2117586223791517882",
+    "poster": "pictures\\HACHI 5th ONE-MAN Live Tour NOCTILICA.jpg"
+  },
+  {
+    "title": "トゲナシトゲアリ ONE-MAN LIVE “凛音の耀”",
+    "date": "2027-03-20 00:00",
+    "artist": "トゲナシトゲアリ",
+    "venue": "Kアリーナ横浜",
+    "flag": "jp",
+    "seat": "",
+    "info": "https://girls-band-cry.com/live/post-26.html",
+    "poster": "pictures\\トゲナシトゲアリ ONE-MAN LIVE “凛音の耀”.jpg"
+  },
+  {
+    "title": "milet Asia Tour 2027 in Hong Kong",
+    "date": "2027-01-24 20:00",
+    "artist": "milet",
+    "venue": "AsiaWorld-Arena （1號展館）",
+    "flag": "hk",
+    "seat": "",
+    "info": "https://www.ticketflap.com/zh-hant/milet2027",
+    "poster": "pictures\\milet Asia Tour 2027 in Hong Kong.jpg"
+  },
+  {
+    "title": "MyGO!!!!! 9th LIVE「つなぎ目の向こうに」- 香港還想編 -",
+    "date": "2027-01-03 19:00",
+    "artist": "MyGO!!!!!",
+    "venue": "AsiaWorld-Expo, Hall 5",
+    "flag": "hk",
+    "seat": "",
+    "info": "https://www.ticketflap.com/zh-hant/mygo-9th-live",
+    "poster": "pictures\\MyGO!!!!! 9th LIVE「つなぎ目の向こうに」- 香港還想編 -.jpg"
+  },
+  {
     "title": "Reol Secret Live 極秘LEGIT #2 東の宴",
     "date": "2026-12-15 18:30",
     "artist": "Reol",
